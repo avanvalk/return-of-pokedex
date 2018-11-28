@@ -23,7 +23,7 @@ export default {
       pokemons: pokemonApi.getPokemon(),
       filter: {
         name:'',
-        type_1: '',
+        hp: '',
         attack: '',
         defense: ''
       },
@@ -41,10 +41,10 @@ export default {
     filtered() {
       return this.pokemons.filter(pokemon => {
         const hasName = !this.filter.name || pokemon.pokemon.includes(this.filter.name);
-        const hasType = !this.filter.type_1 || pokemon.type_1.includes(this.filter.type_1);
+        const hasHp = !this.filter.hp || pokemon.hp >= this.filter.hp;
         const hasAttack = !this.filter.attack || pokemon.attack >= this.filter.attack;
         const hasDefense = !this.filter.defense || pokemon.defense >= this.filter.defense;
-        return hasName && hasType && hasAttack && hasDefense;
+        return hasName && hasHp && hasAttack && hasDefense;
       });
     },
     sorted() {

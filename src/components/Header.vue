@@ -7,9 +7,9 @@
     >
     </label>
 
-    <label for="type_1"> Type:
-    <input type="text" name="type_1" id="type_1"
-    v-model.text:="filter.type_1"
+    <label for="hp"> Health:
+    <input type="text" name="hp" id="hp"
+    v-model.text:="filter.hp"
     >
     </label>
 
@@ -29,7 +29,7 @@
       Sort By:
       <select v-model="sort.field">
         <option value="pokemon">Name</option>
-        <option value="type_1">Type</option>
+        <option value="hp">Health</option>
         <option value="attack">Attack</option>
         <option value="defense">Defense</option>
       </select>

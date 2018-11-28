@@ -7,7 +7,23 @@
     >
     </label>
 
-    
+    <label for="type_1"> Type:
+    <input type="text" name="type_1" id="type_1"
+    v-model.text:="filter.type_1"
+    >
+    </label>
+
+    <label for="attack"> Minimum Attack:
+    <input type="text" name="attack" id="attack"
+    v-model.text:="filter.attack"
+    >
+    </label>
+
+    <label for="defense"> Mimumum Defense:
+    <input type="text" name="defense" id="defense"
+    v-model.text:="filter.defense"
+    >
+    </label>
     
     <label for="sort">
       Sort By:

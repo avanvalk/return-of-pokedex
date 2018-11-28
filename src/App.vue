@@ -22,10 +22,10 @@ export default {
     return {
       pokemons: pokemonApi.getPokemon(),
       filter: {
-        name:"",
-        type_1: "",
-        attack: "",
-        defense: ""
+        name:'',
+        type_1: '',
+        attack: '',
+        defense: ''
       },
       sort: {
         field: 'name',

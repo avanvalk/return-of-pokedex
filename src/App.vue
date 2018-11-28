@@ -43,7 +43,8 @@ export default {
         const hasName = !this.filter.name || pokemon.pokemon >= this.filter.name;
         const hasType = !this.filter.type_1 || pokemon.type_1 === this.filter.type_1;
         const hasAttack = !this.filter.attack || pokemon.attack >= this.filter.attack;
-        return hasName && hasType && hasAttack;
+        const hasDefense = !this.filter.defense || pokemon.defense >= this.filter.defense;
+        return hasName && hasType && hasAttack && hasDefense;
       });
     },
     sorted() {

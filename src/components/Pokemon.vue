@@ -6,6 +6,7 @@
       <h3>{{ pokemon.pokemon }}</h3>
       <p>attack: {{ pokemon.attack }}</p>
       <p>defense: {{ pokemon.defense }}</p>
+      <p>health: {{ pokemon.hp }}</p>
     </div>
   </li>
 </template>

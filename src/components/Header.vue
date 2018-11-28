@@ -1,18 +1,21 @@
 <template>
   <header>
-<label> Name:
+
+    <label for="name"> Name:
     <input type="text" name="name" id="name"
     v-model.text:="filter.name"
-    step="100"
     >
     </label>
+
     
-    <label>
+    
+    <label for="sort">
       Sort By:
       <select v-model="sort.field">
         <option value="name">Name</option>
-        <option value="type">Type</option>
-        <option value="weight">Weight</option>
+        <option value="type_1">Type</option>
+        <option value="attack">Attack</option>
+        <option value="defense">Defense</option>
       </select>
       <select v-model="sort.direction">
         <option value="1">Ascending order</option>
@@ -33,8 +36,8 @@ export default {
 
 <style scoped>
 header {
-  background: steelblue;
+  background: black;
   color: white;
-  padding: 10px;
+  padding: 5px;
 }
 </style>

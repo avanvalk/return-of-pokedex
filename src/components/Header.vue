@@ -12,7 +12,7 @@
     <label for="sort">
       Sort By:
       <select v-model="sort.field">
-        <option value="name">Name</option>
+        <option value="pokemon">Name</option>
         <option value="type_1">Type</option>
         <option value="attack">Attack</option>
         <option value="defense">Defense</option>

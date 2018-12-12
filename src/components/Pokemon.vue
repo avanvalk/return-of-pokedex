@@ -1,11 +1,11 @@
 
 <template>
   <li
-  v-bind:key="pokemon"
+  v-bind:key="pokemon.pokemon"
   >
     <button @click="show = true">Details</button>
     <Modal v-if="show" :onClose="() => show = false">
-    <!-- <PokemonDetail></PokemonDetail> -->
+    <PokemonDetail :pokemon = "pokemon"/>
     </Modal>
     <img v-bind:src="pokemon.url_image"/>
     <div class="info">
@@ -18,15 +18,23 @@
 </template>
 
 <script>
+import PokemonDetail from './PokemonDetail';
+import Modal from './Modal';
 
 export default {
   props: {
     pokemon: Object
+  },
+  data() {
+    return {
+      show: false
+    };
+  },
+  components: {
+    PokemonDetail,
+    Modal
   }
 };
-
-
-
 </script>
 
 <style scoped>

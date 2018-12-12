@@ -1,14 +1,12 @@
 
 <template>
-<transition-group 
-  name="staggered-transition"
-  v-on:before-enter="beforeEnter"
-  v-on:enter="enter"
-  v-on:leave="leave"
->
   <li
   v-bind:key="pokemon"
   >
+    <button @click="show = true">Details</button>
+    <Modal v-if="show" :onClose="() => show = false">
+    <!-- <PokemonDetail></PokemonDetail> -->
+    </Modal>
     <img v-bind:src="pokemon.url_image"/>
     <div class="info">
       <h3>{{ pokemon.pokemon }}</h3>
@@ -17,7 +15,6 @@
       <p>health: {{ pokemon.hp }}</p>
     </div>
   </li>
-</transition-group>
 </template>
 
 <script>
@@ -25,32 +22,6 @@
 export default {
   props: {
     pokemon: Object
-  },
-  methods: {
-    beforeEnter: function(el) {
-      el.style.opacity = 0;
-      el.style.height = 0;
-    },
-    enter: function(el, done) {
-      var delay = el.dataset.index * 150;
-      setTimeout(function() {
-        Velocity(
-          el,
-          { opacity: 1, height: '1.6em' },
-          { complete: done }
-        );
-      }, delay);
-    },
-    leave: function(el, done) {
-      var delay = el.dataset.index * 150;
-      setTimeout(function() {
-        Velocity(
-          el,
-          { opacity: 0, height: 0 },
-          { complete: done }
-        );
-      }, delay);
-    }
   }
 };
 

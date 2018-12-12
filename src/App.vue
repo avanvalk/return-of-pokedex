@@ -4,7 +4,7 @@
     <Header 
       v-bind:sort="sort" 
       v-bind:filter="filter" 
-      />
+    />
 
     <Pokemons v-bind:pokemons="sorted"/>
   </div>

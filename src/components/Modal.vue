@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="postcss">
 .modal {
   z-index: 10000;
   position: fixed;

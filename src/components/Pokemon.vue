@@ -37,10 +37,16 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
+
 li {
   position: relative;
   height: 300px;
+  &:hover {
+  img {
+    transform: scale(1.3);
+  }
+}
 }
 img {
   position: absolute;
